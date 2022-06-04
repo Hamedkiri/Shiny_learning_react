@@ -6,6 +6,7 @@ const rotate = keyframes`
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -17,14 +18,13 @@ export const Loader = styled.div`
   border-bottom-color: transparent;
   border-radius: 22px;
   animation: ${rotate} 1s infinite linear;
-  height: 1px;
-  width: 1px;
-  margin: auto;
+  height: 0;
+  width: 0;
 `
 
 export const StyledLink = styled(Link)`
   padding: 10px 15px;
-  color: #8186a0;
+  color: ${({ $theme }) => ($theme === 'light' ? '#8186a0' : '#ffffff')};
   text-decoration: none;
   font-size: 18px;
   text-align: center;

@@ -1,4 +1,4 @@
-import { createContext, useState } from 'react'
+import React, { useState, createContext } from 'react'
 
 export const ThemeContext = createContext()
 
@@ -29,5 +29,3 @@ export const SurveyProvider = ({ children }) => {
     </SurveyContext.Provider>
   )
 }
-
-export default ThemeProvider
